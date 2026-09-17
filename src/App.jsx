@@ -1,18 +1,20 @@
+import './App.css';
 function App(){
   return(
     <>
     <header>
-      <nav> 
+       
         <h1>SmartShop</h1>
+        <nav>
         <ul>
          <li><a href="#">Home</a></li>
          <li><a href="#">Products</a></li>
          <li><a href="#">Offers</a></li>
          <li><a href="#">Orders</a></li>
 
-         <button>Cart</button>
         </ul>
-      </nav>
+        </nav>
+         <button>Cart</button>
       </header>
       <main>
         <section>
