@@ -14,7 +14,7 @@ function App(){
 
         </ul>
         </nav>
-         <button>Cart</button>
+         <button className="card-btn">Cart</button>
       </header>
       <main>
         <section>
