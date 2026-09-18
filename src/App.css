@@ -8,6 +8,17 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.hero{
+    min-height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -37,7 +48,17 @@ nav a:hover{
     cursor: pointer;
 
 }
+.hero-btn
+{
+ padding: 12px 25px;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+}
 
+.hero-btn:hover {
+    background-color: #ddd;
+}
 .card-btn:hover{
     background-color: #ddd;
 }

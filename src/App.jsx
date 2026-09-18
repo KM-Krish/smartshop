@@ -17,10 +17,10 @@ function App(){
          <button className="card-btn">Cart</button>
       </header>
       <main>
-        <section>
+        <section className="hero">
         <h2>Welcome to SmartShop</h2>
         <p>Get special offers when you visit our stores</p>
-        <button>Allow Location</button>
+        <button  className="hero-btn">Allow Location</button>
         </section>
 
 
