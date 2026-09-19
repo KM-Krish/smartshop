@@ -25,7 +25,7 @@ function App(){
 
 
 
-       <article>
+          <article>
             <h3>10% OFF</h3>
             <p>Get 10% discount on purchases above ₹2000.</p>
             <button>Shop Now</button>
@@ -34,7 +34,7 @@ function App(){
 
         <section>
           <h2>Products</h2>
-
+          <div className="products-grid">
           <article>
             <h3>Product 1</h3>
             <p>₹500</p>
@@ -52,6 +52,7 @@ function App(){
             <p>₹1200</p>
             <button>Add to Cart</button>
           </article>
+          </div>
         </section>
       </main>
 

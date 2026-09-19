@@ -19,6 +19,35 @@ body {
 
 }
 
+.products-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
+
+}
+
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.products-grid article {
+    border : 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    min-height: 180px;
+}
+.products-grid article button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.products-grid button:hover {
+    background-color: #ddd;
+}
+    
 header {
     display: flex;
     justify-content: space-between;
