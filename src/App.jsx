@@ -18,7 +18,7 @@ function App(){
       </header>
       <main>
         <section className="hero">
-        <h2>Welcome to SmartShop</h2>
+        <h1>Welcome to SmartShop</h1>
         <p>Get special offers when you visit our stores</p>
         <button  className="hero-btn">Allow Location</button>
         </section>
