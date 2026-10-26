@@ -1,15 +1,38 @@
 import Header from './Header';
 import Hero from './Hero';
 import ProductCard from './ProductCard';
+import{useState,useEffect} from "react";
 
 
- const products = [
-  { id: 1, name: "Product 1", price: 500 },
-  { id: 2, name: "Product 2", price: 800 },
-  { id: 3, name: "Product 3", price: 1200 }
-  ];
+
 function Home(){
+    const[products,setProducts] = useState([]);
+    const[loading,setLoading] = useState(true);
+    const[error,setError]= useState("");
+
+    useEffect(()=>{
+      fetch("https://dummyjson.com/products?limit=9")
+      .then((response) => {
+        if(!response.ok){
+          throw new Error("Failed to fetch products");
+
+        }
+        return response.json();
+      })
+      .then((data) =>{
+        setProducts(data.products);
+
+      })
+      .catch((error) =>{
+        setError(error.message);
+      })
+      .finally(() =>{
+        setLoading(false);
+
+      })
+      },[]);
     return(
+
         <>
            <Header />
       <main>
@@ -24,7 +47,7 @@ function Home(){
         
 
         <section className="products">
-          <h2>Products</h2>
+          <h2>OurProducts</h2>
           <div className="products-grid">
            {products.map((product) => (
            <ProductCard
@@ -32,6 +55,7 @@ function Home(){
            key={product.id}
            name={product.name}
            price={product.price}
+           image={product.thumbnail}
              />
             ))}
           </div>
